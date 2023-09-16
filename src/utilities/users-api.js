@@ -1,38 +1,7 @@
+/*
 import { getToken } from "./users-service";
 
 const BASE_URL = '/api/users'
-
-// export async function signUp(userData) {
-//     console.log('API USER-DATA', userData);
-//     const res = await fetch(BASE_URL, {
-//         method: 'POST',
-//         headers: {'Content-Type': 'application/json'},
-//         body: JSON.stringify(userData)
-//     });
-
-//     if(res.ok){
-//         return res.json()
-//     } else {
-//         throw new Error('Invalid Sign Up!!')
-//     }
-// }
-
-// export async function login(credentials) {
-//     console.log('API USER-DATA', credentials);
-//     const res = await fetch(BASE_URL + '/login', {
-//         method: 'POST',
-//         headers: {'Content-Type': 'application/json'},
-//         body: JSON.stringify(credentials)
-//     });
-
-//     if(res.ok){
-//         return res.json()
-//     } else {
-//         throw new Error('Invalid Credentials!!')
-//     }
-// }
-
-
 export function signUp(userData) {
     return sendRequest(BASE_URL, 'POST', userData);
 }
@@ -69,3 +38,18 @@ async function sendRequest(url, method = "GET", payload = null) {
     if (res.ok) return res.json();
     throw new Error("Bad Request");
   }
+
+  
+*/
+
+import sendRequest from './send-request';
+
+const BASE_URL = '/api/users';
+
+export function signUp(userData) {
+  return sendRequest(BASE_URL, 'POST', userData);
+}
+
+export function login(credentials) {
+  return sendRequest(`${BASE_URL}/login`, 'POST', credentials);
+}
