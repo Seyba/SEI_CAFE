@@ -171,6 +171,16 @@ button[type="submit"] {
 
 :root {
   --white: #FFFFFF;
+  --tan-1: #e6ffff;
+  --tan-2: #E7E2DD;
+  --tan-3: #E2D9D1;
+  --tan-4: #009999;
+  --blue: #006666;
+  --text-light: #008080;
+  --text-dark: #004d4d;
+}
+rootCopy {
+  --white: #FFFFFF;
   --tan-1: #FBF9F6;
   --tan-2: #E7E2DD;
   --tan-3: #E2D9D1;
@@ -178,8 +188,8 @@ button[type="submit"] {
   --blue: #F67F00;
   --text-light: #968c84;
   --text-dark: #615954;
-}
 
+}
 *, *:before, *:after {
   box-sizing: border-box;
 }
