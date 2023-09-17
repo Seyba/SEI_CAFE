@@ -1,6 +1,5 @@
 require('dotenv').config();
-require('./database');
-
+const databaseConnection = require('./database')
 const Category = require('../models/category');
 const Item = require('../models/item');
 
@@ -68,3 +67,5 @@ const Item = require('../models/item');
   process.exit();
 
 })();
+
+databaseConnection()
